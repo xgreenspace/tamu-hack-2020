@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/tamu-hack-2020/precache-manifest.6221d05d7e6f55f21d2299431f802f88.js"
+  "/tamu-hack-2020/precache-manifest.87abd630246e69f94f8ab4c06be4d1a5.js"
 );
 
 self.addEventListener('message', (event) => {
