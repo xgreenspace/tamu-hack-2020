@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tamu-hack-2020/static/css/main.5f361e03.chunk.css",
+    "main.js": "/tamu-hack-2020/static/js/main.da52d9d3.chunk.js",
+    "main.js.map": "/tamu-hack-2020/static/js/main.da52d9d3.chunk.js.map",
+    "runtime-main.js": "/tamu-hack-2020/static/js/runtime-main.60926be2.js",
+    "runtime-main.js.map": "/tamu-hack-2020/static/js/runtime-main.60926be2.js.map",
+    "static/js/2.763b34e5.chunk.js": "/tamu-hack-2020/static/js/2.763b34e5.chunk.js",
+    "static/js/2.763b34e5.chunk.js.map": "/tamu-hack-2020/static/js/2.763b34e5.chunk.js.map",
+    "index.html": "/tamu-hack-2020/index.html",
+    "precache-manifest.8ee8283b74251c400b1aa1a94c80d76e.js": "/tamu-hack-2020/precache-manifest.8ee8283b74251c400b1aa1a94c80d76e.js",
+    "service-worker.js": "/tamu-hack-2020/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/tamu-hack-2020/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.763b34e5.chunk.js.LICENSE.txt": "/tamu-hack-2020/static/js/2.763b34e5.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/tamu-hack-2020/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.60926be2.js",
+    "static/js/2.763b34e5.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.da52d9d3.chunk.js"
+  ]
+}
