@@ -1,6 +1,6 @@
 # tamu-hack-2020
 
-## Cybersecurity Website Utilizing HaveIBeenPwned
+Cybersecurity Website Utilizing HaveIBeenPwned
 
 ## Introduction
 
