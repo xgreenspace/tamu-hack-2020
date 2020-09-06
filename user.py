@@ -9,7 +9,7 @@ class User:
 
         with open('private_key.json') as f:
             KEY = json.load(f)
-            API_KEY = KEY['auth_token']
+            API_KEY = KEY['pwnd_token']
             f.close()
 
         pyhibp.set_api_key(key=API_KEY)
