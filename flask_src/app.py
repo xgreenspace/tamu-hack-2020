@@ -16,10 +16,10 @@ def breach():
         email = request.form["email"]
         phone = request.form["phone"]
         # Make the id iterate
-        post = {"email": email, "phone": phone}
+        post = {"email": email, "phone": "+1" + phone}
         collection.insert_one(post)
         # Run Amari's python file
-        email_message(email, phone)
+        email_message(email, "+1" + phone)
         return render_template("success.html")
     else:
         return render_template("breach.html")
