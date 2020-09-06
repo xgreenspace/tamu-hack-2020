@@ -20,10 +20,11 @@ export class Landing extends Component {
         this.setState({[e.target.name]: e.target.value})
     }
 
+    // Stops submission from refreshing, prints out data to console, makes a POST request
     submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
-        axios.post('https://jsonplaceholder.typicode.com/posts', this.state)
+        axios.post('http://localhost:5000/api/query', this.state)
             .then(response => {
                 console.log(response)
             })
