@@ -26,7 +26,7 @@ class User:
             return None
 
     def __repr__(self):
-        return 'The User: {} has been involved in {} breaches.'.format(self.email, len(self.breaches))
+        return 'The User: {} has been involved in {} breaches. Please change your password.'.format(self.email, len(self.breaches))
 
     def get_breaches(self):
         return self.breaches

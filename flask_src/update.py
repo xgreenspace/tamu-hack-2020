@@ -23,4 +23,3 @@ data = pd.read_csv('database.csv', encoding='utf-8', dtype={'phone_number':'stri
 for i in range(len(data['email'])):
     update(i)
 
-
