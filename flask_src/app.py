@@ -2,7 +2,7 @@ from flask import Flask, redirect, url_for, render_template, request, jsonify
 import pymongo
 from flask_pymongo import PyMongo
 from pymongo import MongoClient 
-from emailscript import email_message
+from update import update
 app = Flask(__name__)
 
 # inserts a post/ document into the mongodb collection
@@ -14,7 +14,7 @@ def breach():
         phone = request.form["phone"]
 
         # Run e-mail and text script
-        
+        update(email, phone)
 
         return render_template("success.html")
     else:
