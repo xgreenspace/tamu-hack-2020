@@ -1,21 +1,25 @@
 from flask import Flask, redirect, url_for, render_template, request, jsonify
 import pymongo
+from flask_pymongo import PyMongo
 from pymongo import MongoClient
 
 app = Flask(__name__)
-cluster = MongoClient("mongodb+srv://bacon:tamushamu2001@cluster0.3ksm9.mongodb.net/howdy-hack-2020?retryWrites=true&w=majority")
-db = cluster["howdy-hack-2020"]
-collection = db["howdy-hack-2020"]
-
-post = {"_id":00, "email": "test@gmail.com", "phone": 1234567890}
+cluster = MongoClient("mongodb+srv://bacon:tamushamu2001@cluster0.3ksm9.mongodb.net/howdy_hack_2020?retryWrites=true&w=majority")
+db = cluster["howdy_hack_2020"]
+collection = db["howdy_hack_2020"]
 
 # inserts a post/ document into the mongodb collection
-collection.insert_one(post)
 
-@app.route("/", methods=["POST", "SGET"])
+@app.route("/", methods=["POST", "GET"])
 def breach():
     if request.method == "POST":
-        user = request.form["nm"]
+        email = request.form["email"]
+        phone = request.form["phone"]
+        # Make the id iterate
+        count = len(db.tamu_hack_2020.distinct("_id")) + 1
+        post = {"email": email, "phone": phone}
+        collection.insert_one(post)
+        # Run Amari's python file
         return redirect(url_for("user", usr=user))
     else:
         return render_template("breach.html")
