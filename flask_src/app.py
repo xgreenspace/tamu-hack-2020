@@ -1,8 +1,8 @@
 from flask import Flask, redirect, url_for, render_template, request, jsonify
 import pymongo
 from flask_pymongo import PyMongo
-from pymongo import MongoClient
-
+from pymongo import MongoClient 
+from emailscript import email_message
 app = Flask(__name__)
 cluster = MongoClient("mongodb+srv://bacon:tamushamu2001@cluster0.3ksm9.mongodb.net/howdy_hack_2020?retryWrites=true&w=majority")
 db = cluster["howdy_hack_2020"]
@@ -16,11 +16,11 @@ def breach():
         email = request.form["email"]
         phone = request.form["phone"]
         # Make the id iterate
-        count = len(db.tamu_hack_2020.distinct("_id")) + 1
         post = {"email": email, "phone": phone}
         collection.insert_one(post)
         # Run Amari's python file
-        return redirect(url_for("user", usr=user))
+        email_message(email, phone)
+        return render_template("success.html")
     else:
         return render_template("breach.html")
 
