@@ -1,2 +1,5 @@
 test.ipynb
 test.py
+installgitsecret.sh
+.gitsecret/keys/random_seed
+private_key.json

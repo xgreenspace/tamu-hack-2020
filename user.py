@@ -1,10 +1,17 @@
 import pyhibp
+import json
 import time
+
 from pyhibp import pwnedpasswords as pw
 
 class User:
     def __init__(self, email=None, phone_num=None):
-        API_KEY = "615d678ee4c3457cbabcca2d8661f891"
+
+        with open('private_key.json') as f:
+            KEY = json.load(f)
+            API_KEY = KEY['auth_token']
+            f.close()
+
         pyhibp.set_api_key(key=API_KEY)
         pyhibp.set_user_agent(ua="Making a test application for a project.")
 
